@@ -1,4 +1,3 @@
-
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -7,6 +6,11 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import TrackingDetail from "./pages/TrackingDetail";
 import NotFound from "./pages/NotFound";
+import Deliveries from "./pages/Deliveries";
+import DroneMapPage from "./pages/DroneMapPage";
+import Analytics from "./pages/Analytics";
+import Preferences from "./pages/Preferences";
+import HelpSupport from "./pages/HelpSupport";
 
 const queryClient = new QueryClient();
 
@@ -18,8 +22,12 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
+          <Route path="/deliveries" element={<Deliveries />} />
+          <Route path="/drone-map" element={<DroneMapPage />} />
+          <Route path="/analytics" element={<Analytics />} />
+          <Route path="/preferences" element={<Preferences />} />
+          <Route path="/help-support" element={<HelpSupport />} />
           <Route path="/tracking/:orderId" element={<TrackingDetail />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
