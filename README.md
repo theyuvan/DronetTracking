@@ -84,6 +84,4 @@ npm run build
 # or
 yarn build
 ```
-rts
-  -Route history and performance tracking
-  -Automated scheduling and dispatch
+
